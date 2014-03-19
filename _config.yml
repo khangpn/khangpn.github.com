@@ -5,11 +5,14 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
+# Add this variable to enable jekyll pagination, see index.html for usage
+paginate: 5
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
 title : Noodle Bundle
-tagline: Site Tagline
+tagline: A bow of mixed noodle
 author :
   name : Khang Phuc Nguyen
   email : nguyenphuckhang@gmail.com
@@ -79,7 +82,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : false
+    provider : facebook
     disqus :
       short_name : jekyllbootstrap
     livefyre :
@@ -87,7 +90,7 @@ JB :
     intensedebate :
       account : 123abc
     facebook :
-      appid : 123
+      appid : 285499514937349
       num_posts: 5
       width: 580
       colorscheme: light

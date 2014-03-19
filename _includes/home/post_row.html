@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h1> <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> </h1>
+  <span>{{ post.date | date_to_long_string }}</span>
+</div>
+
+<div class="row">
+  <div class="span12">
+    {{ post.content }}
+  
+    {% unless post.tags == empty %}
+      <div class="tag_box">
+        <b> Tags: </b>
+        {% for tag in post.tags %} 
+    	    <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a>
+        {% endfor %}
+      </div>
+    {% endunless %}  
+  </div>
+</div>
+<hr>

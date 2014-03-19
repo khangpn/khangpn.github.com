@@ -1,0 +1,93 @@
+---
+layout: post
+title: "Introduction to OpenStack (part1)"
+description: ""
+category: technical
+tags: [network, openstack]
+---
+{% include JB/setup %}
+
+Although OpenStack is not a new topic nowadays, there are still not many articles talking about it. Most of definition articles found on Internet are technically quite complex with many terms and design strategies. This post is converted from my presentation in university.&nbsp; In my presentation, I tried to illustrate OpenStack definition, design, and why we need it in a funny, straightforward way.<br />
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://2.bp.blogspot.com/-id7mMiEe1_4/UyILlMRDktI/AAAAAAAAAQk/mQAYFqly-y0/s1600/openstack.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+    <img border="0" src="http://2.bp.blogspot.com/-id7mMiEe1_4/UyILlMRDktI/AAAAAAAAAQk/mQAYFqly-y0/s1600/openstack.jpg" height="200" width="192" />
+  </a>
+</div>
+The <a href="https://www.openstack.org/software/" rel="nofollow">official site</a> defines the OpenStack as<br />
+<blockquote class="tr_bq">
+  "OpenStack is a cloud operating system that controls large pools of compute, storage, and networking resources throughout a datacenter, all managed through a dashboard that gives administrators control while empowering their users to provision resources through a web interface."
+</blockquote>
+RackSpace, the cooperator with Nasa in writing the first versions of OpenStack, also has an introduction <a href="http://www.youtube.com/watch?v=Qz5gyDenqTI" rel="nofollow">video</a> about OpenStack features and benefits.<br />
+<div class="separator" style="clear: both; text-align: center;">
+  <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/Qz5gyDenqTI" width="560">youtube</iframe>
+</div>
+<br />
+So what is OpenStack really? It's a story of scalability in which OpenStack is a solution for a flexible and cheap infrastructure management.<br />
+## A story of scalability
+### "Once upon a time..."
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://2.bp.blogspot.com/-ZWyHo6ZmS5w/UyIOstbSmZI/AAAAAAAAASE/3dHTCfnP4_s/s1600/knight+and+dragon.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+    <img border="0" src="http://2.bp.blogspot.com/-ZWyHo6ZmS5w/UyIOstbSmZI/AAAAAAAAASE/3dHTCfnP4_s/s1600/knight+and+dragon.png" height="192" width="320" />&nbsp;
+  </a>
+</div>
+In term of infrastructure, the most common approach of deploying a web service is to buy a machine, configure and push the code to it.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://2.bp.blogspot.com/-RBDmOnd68Sg/UyIS1Xa5GZI/AAAAAAAAASU/XXWay-efwfc/s1600/simple_deploy.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-RBDmOnd68Sg/UyIS1Xa5GZI/AAAAAAAAASU/XXWay-efwfc/s1600/simple_deploy.png" height="69" width="320" /></a></div>
+Waaoo, this works fine and everyone is happy. At least before they see what's coming next.<br />
+As the application grows up, along with more customers, more accesses, and more "income"..., the computing resources required also increases. Once machines are added, the amount of time spent in configuration and management surges as well.<br />
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://2.bp.blogspot.com/-QWXH0otXHKs/UyIaXvSW8xI/AAAAAAAAASg/1l3NVXp1ZpY/s1600/complex_deploying.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+    <img border="0" src="http://2.bp.blogspot.com/-QWXH0otXHKs/UyIaXvSW8xI/AAAAAAAAASg/1l3NVXp1ZpY/s1600/complex_deploying.png" height="95" width="320" />
+  </a>
+</div>
+And one day...<br />
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="http://1.bp.blogspot.com/-qpJUnJKCwOs/UyIbhK9UMbI/AAAAAAAAAS0/oyf_H7jYERc/s1600/over_number_deploying.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+    <img border="0" src="http://1.bp.blogspot.com/-qpJUnJKCwOs/UyIbhK9UMbI/AAAAAAAAAS0/oyf_H7jYERc/s1600/over_number_deploying.png" height="160" width="400" />
+  </a>
+</div>
+And anyone think about wasting? An common application rarely consumes the whole machine's resources. So what we do with the rest? An other "the rest" from other machines!<br />
+
+### "Hypervisor - the wrapper"
+In order to solve the physical scale problem, some clever developers apply a technology called "Hypervisor". It is to use virtual machines such as Vmware, KVM, XenAPI etc... to create many virtual environments from a certain of computing resource. By that way, the environments can be scaled dynamically without acknowledging the hardwares beneath.<br />
+Those virtual machines are easy to add more processing power (by configuring the virtual machine) and to provision all required configurations using some tools such as puppet, chef etc...<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://4.bp.blogspot.com/-wRXL8tZD9QY/UyIwhLsZQ_I/AAAAAAAAATE/dHYuEoUWjKE/s1600/hypervision.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-wRXL8tZD9QY/UyIwhLsZQ_I/AAAAAAAAATE/dHYuEoUWjKE/s1600/hypervision.png" height="144" width="320" /></a></div>
+<br />
+Hypervisor still has some problems:<br />
+<ul>
+<li>Hard to manage the virtual environments when the number increases. In term of management, it's just similar to working with real devices.</li>
+<li>When the number of computing resources (servers, hardware devices) raises, it's hard to monitor the total amount of resources, individual machine's resource, due to lacking of overview of resources. </li>
+</ul>
+&nbsp;Here OpenStack comes to rescue.<br />
+
+### "Let's pool them"
+The idea is to put all resources (computing power, storage, network) in a pool. From the pool, it provides a single interface in order to monitor everything.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://1.bp.blogspot.com/-laJEZZb-pBU/UyI3SHZDALI/AAAAAAAAATU/0MC1-riCWFk/s1600/pool.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-laJEZZb-pBU/UyI3SHZDALI/AAAAAAAAATU/0MC1-riCWFk/s1600/pool.png" height="194" width="320" /></a></div>
+Getting benefit from hypervisors and provision tools, a virtual machine simply collects resources (computing power, storage, network) from the pool which is easy to scale at anytime.Provides “images” service which help to set up an instance in minutes.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://1.bp.blogspot.com/-w9CZgxcdAx4/UyI5E9h9oGI/AAAAAAAAATg/F3Vtoyh_F9I/s1600/get_from_pool.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-w9CZgxcdAx4/UyI5E9h9oGI/AAAAAAAAATg/F3Vtoyh_F9I/s1600/get_from_pool.png" height="252" width="320" /></a></div>
+
+### "Shield for the warrior"
+OpenStack provides a users-based authentication to the whole system as well as the machines themselves. Administrator can create, add, users to projects and manage them via a central tool. The users are also managed by role-based system. Each role gives them specific accesses and controls to the system or a virtual machine.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://1.bp.blogspot.com/-CgegK0keEg8/UyI9sPSCUFI/AAAAAAAAATs/WDFFeZNfDOs/s1600/user_authentication.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-CgegK0keEg8/UyI9sPSCUFI/AAAAAAAAATs/WDFFeZNfDOs/s1600/user_authentication.png" height="171" width="320" /></a></div>
+
+### "Castle of the Kingdom"
+OpenStack provides a central management to analyze the resource and easily<br />
+control everything. It's the only place administrators or users need to care about and consists of all-in-one tool to add, remove, modify resources, projects, users etc... OpenStack also provides a dashboard for common users to manage their machine. If you are a developer and you want to build your own management tool (e.g RightScale...) or just simply interact directly with the tool, OpenStack API is ready for you.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://4.bp.blogspot.com/-539RBQ0Em4A/UyILg8YWEZI/AAAAAAAAAPo/qsadntgfqsc/s1600/im_watching_u.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-539RBQ0Em4A/UyILg8YWEZI/AAAAAAAAAPo/qsadntgfqsc/s1600/im_watching_u.png" height="181" width="200" /></a></div>
+
+## What is OpenStack?
+So what is OpenStack again? The best comparison could be Amazon AWS and Microsoft Azure. They are IaaS and they allow building infrastructure flexibly and easy to scale. It puts all resources in a pool and allows we extract from that to build machines. When a machine (application) needs more resources, it can easily extend without machine reconfigurations needed. The amount of resources in the pool is also able to be extended via the management center. So if you have so many resources or projects to manage, and they are very likely to scale significantly in the future, OpenStack is on your side.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://3.bp.blogspot.com/-iVuzNDz6vVA/UyILkvq9zgI/AAAAAAAAAQY/JhlYxpNHsVk/s1600/openstack-software-diagram.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-iVuzNDz6vVA/UyILkvq9zgI/AAAAAAAAAQY/JhlYxpNHsVk/s1600/openstack-software-diagram.png" height="165" width="400" /></a></div>
+OpenStack has a huge community from which you can get benefit. It means that you can build your own system and get support from the crowd. OpenStack is an open source project which means that you can check and modify the core as well as the management tool which are written in Python.<br />
+As I mentioned above, OpenStack provides an Amazon-like features except the privacy. Because you setup your own system, you have fully privacy on it, then say goodbye to NSA (yet they always have their ways , I guarantee).<br />
+Last but not least, OpenStack is FREE, huray. Now we can have "cloud" for every one.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://4.bp.blogspot.com/-sWJZwdjYFWI/UyILiTT34PI/AAAAAAAAAQU/nqIv08xvgvU/s1600/lesquee.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-sWJZwdjYFWI/UyILiTT34PI/AAAAAAAAAQU/nqIv08xvgvU/s1600/lesquee.png" height="191" width="200" /></a></div>
+It's awesome right? If you feel it is then the next part of this introduction will discuss more about which components there are in OpenStack, as well as their capabilities. Every comments and feedbacks are welcomed. <br />
