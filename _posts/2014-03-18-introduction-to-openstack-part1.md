@@ -23,8 +23,8 @@ RackSpace, the cooperator with Nasa in writing the first versions of OpenStack, 
 </div>
 <br />
 So what is OpenStack really? It's a story of scalability in which OpenStack is a solution for a flexible and cheap infrastructure management.<br />
-## A story of scalability
-### "Once upon a time..."
+<h2> A story of scalability </h2>
+<h3> "Once upon a time..." </h3>
 <div class="separator" style="clear: both; text-align: center;">
   <a href="http://2.bp.blogspot.com/-ZWyHo6ZmS5w/UyIOstbSmZI/AAAAAAAAASE/3dHTCfnP4_s/s1600/knight+and+dragon.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
     <img border="0" src="http://2.bp.blogspot.com/-ZWyHo6ZmS5w/UyIOstbSmZI/AAAAAAAAASE/3dHTCfnP4_s/s1600/knight+and+dragon.png" height="192" width="320" />&nbsp;
@@ -48,7 +48,7 @@ And one day...<br />
 </div>
 And anyone think about wasting? An common application rarely consumes the whole machine's resources. So what we do with the rest? An other "the rest" from other machines!<br />
 
-### "Hypervisor - the wrapper"
+<h3> "Hypervisor - the wrapper" </h3>
 In order to solve the physical scale problem, some clever developers apply a technology called "Hypervisor". It is to use virtual machines such as Vmware, KVM, XenAPI etc... to create many virtual environments from a certain of computing resource. By that way, the environments can be scaled dynamically without acknowledging the hardwares beneath.<br />
 Those virtual machines are easy to add more processing power (by configuring the virtual machine) and to provision all required configurations using some tools such as puppet, chef etc...<br />
 <br />
@@ -62,7 +62,7 @@ Hypervisor still has some problems:<br />
 </ul>
 &nbsp;Here OpenStack comes to rescue.<br />
 
-### "Let's pool them"
+<h3> "Let's pool them" </h3>
 The idea is to put all resources (computing power, storage, network) in a pool. From the pool, it provides a single interface in order to monitor everything.<br />
 <div class="separator" style="clear: both; text-align: center;">
 <a href="http://1.bp.blogspot.com/-laJEZZb-pBU/UyI3SHZDALI/AAAAAAAAATU/0MC1-riCWFk/s1600/pool.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-laJEZZb-pBU/UyI3SHZDALI/AAAAAAAAATU/0MC1-riCWFk/s1600/pool.png" height="194" width="320" /></a></div>
@@ -70,18 +70,18 @@ Getting benefit from hypervisors and provision tools, a virtual machine simply c
 <div class="separator" style="clear: both; text-align: center;">
 <a href="http://1.bp.blogspot.com/-w9CZgxcdAx4/UyI5E9h9oGI/AAAAAAAAATg/F3Vtoyh_F9I/s1600/get_from_pool.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-w9CZgxcdAx4/UyI5E9h9oGI/AAAAAAAAATg/F3Vtoyh_F9I/s1600/get_from_pool.png" height="252" width="320" /></a></div>
 
-### "Shield for the warrior"
+<h3> "Shield for the warrior" </h3>
 OpenStack provides a users-based authentication to the whole system as well as the machines themselves. Administrator can create, add, users to projects and manage them via a central tool. The users are also managed by role-based system. Each role gives them specific accesses and controls to the system or a virtual machine.<br />
 <div class="separator" style="clear: both; text-align: center;">
 <a href="http://1.bp.blogspot.com/-CgegK0keEg8/UyI9sPSCUFI/AAAAAAAAATs/WDFFeZNfDOs/s1600/user_authentication.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-CgegK0keEg8/UyI9sPSCUFI/AAAAAAAAATs/WDFFeZNfDOs/s1600/user_authentication.png" height="171" width="320" /></a></div>
 
-### "Castle of the Kingdom"
+<h3> "Castle of the Kingdom" </h3>
 OpenStack provides a central management to analyze the resource and easily<br />
 control everything. It's the only place administrators or users need to care about and consists of all-in-one tool to add, remove, modify resources, projects, users etc... OpenStack also provides a dashboard for common users to manage their machine. If you are a developer and you want to build your own management tool (e.g RightScale...) or just simply interact directly with the tool, OpenStack API is ready for you.<br />
 <div class="separator" style="clear: both; text-align: center;">
 <a href="http://4.bp.blogspot.com/-539RBQ0Em4A/UyILg8YWEZI/AAAAAAAAAPo/qsadntgfqsc/s1600/im_watching_u.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-539RBQ0Em4A/UyILg8YWEZI/AAAAAAAAAPo/qsadntgfqsc/s1600/im_watching_u.png" height="181" width="200" /></a></div>
 
-## What is OpenStack?
+<h2> What is OpenStack? </h2>
 So what is OpenStack again? The best comparison could be Amazon AWS and Microsoft Azure. They are IaaS and they allow building infrastructure flexibly and easy to scale. It puts all resources in a pool and allows we extract from that to build machines. When a machine (application) needs more resources, it can easily extend without machine reconfigurations needed. The amount of resources in the pool is also able to be extended via the management center. So if you have so many resources or projects to manage, and they are very likely to scale significantly in the future, OpenStack is on your side.<br />
 <div class="separator" style="clear: both; text-align: center;">
 <a href="http://3.bp.blogspot.com/-iVuzNDz6vVA/UyILkvq9zgI/AAAAAAAAAQY/JhlYxpNHsVk/s1600/openstack-software-diagram.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-iVuzNDz6vVA/UyILkvq9zgI/AAAAAAAAAQY/JhlYxpNHsVk/s1600/openstack-software-diagram.png" height="165" width="400" /></a></div>
