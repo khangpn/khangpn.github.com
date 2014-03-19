@@ -68,4 +68,7 @@ body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	
+
+.media {
+  padding: 10px 0 10px 0;
+}
