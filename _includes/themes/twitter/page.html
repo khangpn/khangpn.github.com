@@ -1,8 +1,8 @@
-{% unless page.title == "" %}
+{% if page.show_header == true %}
   <div class="page-header">
     <h1>{{ page.title }} <small>{{ page.tagline }}</small></h1>
   </div>
-{% endunless %}
+{% endif %}
 
 <div class="row">
   <div class="span14">
