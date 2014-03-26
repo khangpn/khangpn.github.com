@@ -71,4 +71,5 @@ body {
 
 .media {
   padding: 10px 0 10px 0;
+  clear: both; text-align: center;
 }
