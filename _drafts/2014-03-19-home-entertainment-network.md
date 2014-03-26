@@ -87,3 +87,9 @@ Most of cables information in this post is referenced from it.
 
 Nowaday, as the revolution of Internet of thing, most of our devices have ability to connect to a network.
 Some devices also have ability to connect to provider's cloud-base service embedded.
+If we can take advantage of it, we can connect them using IP-based network.
+So that we can get rid bundle of connector, instead just use Ethernet or Wifi.
+However, all devices are still able to recognize and share their contents among the network.
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/network_connection_zps8642d317.png" border="0" alt="HDMI cable"/>
+</div>
