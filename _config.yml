@@ -8,6 +8,9 @@ pygments: true
 # Add this variable to enable jekyll pagination, see index.html for usage
 paginate: 5
 
+# URL to the image hosts (Using PhotoBucket)
+image_host: "http://i160.photobucket.com/albums/t165/DragonXP/Blog"
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
