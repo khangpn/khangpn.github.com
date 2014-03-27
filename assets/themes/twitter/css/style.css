@@ -73,3 +73,7 @@ body {
   padding: 10px 0 10px 0;
   clear: both; text-align: center;
 }
+
+img {
+  max-width: 100%;
+}
