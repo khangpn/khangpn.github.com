@@ -189,14 +189,14 @@ In some luxury models, receiver can connect internet support some connective sta
 
 <div class="media">
   <iframe width="560" height="315" src="http://www.youtube.com/embed/WH3JOzxA8G0" frameborder="0">video</iframe>
-  (Airplay Pioneer)
+  <div><b>(Airplay Pioneer)</b></div>
 </div>
 <div class="media">
   <iframe width="560" height="315" src="http://www.youtube.com/embed/4v-YD9ygkMo" frameborder="0">video</iframe>
-  (Spotify on Pioneer)
+  <div><b>(Spotify on Pioneer)</b></div>
 </div>
 
-[This](http://www.hometheaternetwork.com/) is how it fit in your house. Interesting hah!!!
+And [this](http://www.hometheaternetwork.com/) is how everything fits in your house. Interesting hah!!!
 
 ## Conclusion
 
