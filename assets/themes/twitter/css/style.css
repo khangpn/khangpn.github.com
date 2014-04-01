@@ -69,11 +69,19 @@ body {
 	color:#FFF;
 }
 
+/* media ===================================*/
 .media {
   padding: 10px 0 10px 0;
-  clear: both; text-align: center;
+  clear: both; 
+  text-align: center;
+  vertical-align: middle;
 }
 
 img {
   max-width: 100%;
+}
+
+img.small {
+  max-height: 100px;
+  width: auto;
 }
