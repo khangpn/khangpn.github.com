@@ -74,7 +74,7 @@ body {
   padding: 10px 0 10px 0;
   clear: both; 
   text-align: center;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 }
 
 img {
@@ -84,4 +84,18 @@ img {
 img.small {
   max-height: 100px;
   width: auto;
+}
+
+img.avatar {
+  border: 5px solid #FFFFFF;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: 90px;
+}
+
+.cover {
+  height: 170px;
+  background: url("http://static.tumblr.com/77a29de51bd849d135923bc4f0b04c0c/fknav0n/Ko7mpsail/tumblr_static_paintedargyle.png") no-repeat center;
+  margin-bottom: 20px;
 }
