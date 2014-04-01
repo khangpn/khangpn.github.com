@@ -179,11 +179,9 @@ The receiver can also amplify audio signals to a set of surround sound speakers 
 In some luxury models, receiver can connect internet support some connective standard such as Airplay, and some cloud media provider such as Spotify, Pandora...
 
 <div class="media">
-  <iframe width="560" height="315" src="http://www.youtube.com/embed/WH3JOzxA8G0" frameborder="0">video</iframe>
   (Airplay Pioneer)
 </div>
 <div class="media">
-  <iframe width="560" height="315" src="http://www.youtube.com/embed/4v-YD9ygkMo" frameborder="0">video</iframe>
   (Spotify on Pioneer)
 </div>
 
