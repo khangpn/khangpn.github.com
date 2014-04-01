@@ -30,32 +30,56 @@ There are many technologies support them which we can implement via couples of w
 Use cables! Yes, but which one?
 
 *Coaxial or RF*: used for antennas, cable and satelline STBs, TV, ethenet and VCRs etc...
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/c00798628_zps7e043e2b.jpg" border="0" alt="Coaxial cable"/>
+</div>
 
 *Composite*: typically used to transfer standard analog video signals. 
 Not used for HDTV and digital videos.
 I guess some of us are missing this guy e.g video tape, cd player etc... 
 and yes, of course, NES (Famicom), oh my childhood.
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/c00798621_zps42c4bd8f.jpg" border="0" alt="Composite cable"/>
+</div>
 
 *S-Video*: a better choice over standard composite video cables for delivering a better standard video picture.
 I myself have never used this cable. However according to HP's [post](https://h10025.www1.hp.com/ewfrf/wc/document?docname=c00396708&lc=en&cc=us&dlc=en) this is a better standard than *composite*, but it is not a big due since HD is more 'delightsome'.
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/c00798618_zps6ba7cdaa.jpg" border="0" alt="S-video cable"/>
+</div>
 
 *Component*: support HD video signals (greater than 480i).
 Used by HDTV, DVD player.
 This guy is as famous as *composite*, the first HD path of world.
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/c00798616_zps9c1f4bd2.jpg" border="0" alt="Component cable"/>
+</div>
 
 *RCA stereo audio*: transfer audio signal, used for most TVs, VCRs, videodisc players, game console....
 This may be the most seen cable because before HDMI it is the main sound solution.
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/c00798617_zps77c62240.jpg" border="0" alt="RCA stereo audio cable"/>
+</div>
 
 *VGA*: used to transfer analog video signals in various VGA compatible analog display resolutions.
 . Primarily used for PCs, TVs, game consoles...
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/c00798625_zpsf8741a45.jpg" border="0" alt="VGA cable"/>
+</div>
 
 *DVI*: used to transfer high definition digital video signals without audio.
 This standard has much better quality than VGA.
 And in my own opinion, it's even better than HDMI except that it does not support audio transmission.
 Three main types: DVI-D (digital video signal with HD), DVI-A (analog video signal only), DVI-I (the best of both world for analog and digital).
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/c00798614_zps1226fd37.jpg" border="0" alt="DVI cable"/>
+</div>
 
 *HDMI*: used to transfer both high definition digital video and audio signals.
 Ideal for HDTV, game console, DVD Blueray players etc... most of modern devices today.
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/c00798607_zps38e15b06.jpg" border="0" alt="HDMI cable"/>
+</div>
 
 You can read more about cables in HP's [post](https://h10025.www1.hp.com/ewfrf/wc/document?docname=c00396708&lc=en&cc=us&dlc=en). 
 Most of cables information in this post is referenced from it.
@@ -67,6 +91,9 @@ Some devices even have ability to connect to cloud-base services of its provider
 If we can take advantage of this connection, we can 'wire' our devices using IP-based network.
 So that we can get rid of bundle connectors, instead just use Ethernet or Wifi.
 However, in order to make them really recorgnize each other, there will be a lot of things to do.
+<div class="media">
+  <img src="{{ site.image_host }}/{{ page.image_dir }}/network_connection_zps8642d317.png" border="0" alt="HDMI cable"/>
+</div>
 
 Thus, when we put two devices into one network, they have connection to Internet or some cloud services.
 However, in order to recorgnize and get benefit of each other, they will need to know the partner's functions and how to invoke them.
@@ -85,6 +112,9 @@ Today, we can easily find *UPnP* or *DLNA* sign on many electronic devices e.g T
 
 #### UPnP
 
+<div class="media">
+  <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/upnp_logo_zps3155ca7f.jpg" border="0" alt="*UPnP*"/>
+</div>
 
 *UPnP* is a protocol set. 
 It is formed in October 1999. 
@@ -95,6 +125,9 @@ In another word, it can not guarantee the media to be played by receiver after t
 
 #### DLNA
 
+<div class="media">
+  <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/dlna_logo_zps1ca21dca.jpg" border="0" alt="dlna"/>
+</div>
 
 *DLNA* is a descendant of *UPnP*.
 Although it has a smaller number of supported devices, *DLNA* is very popular in modern devices.
@@ -110,6 +143,9 @@ They allow streaming content among supported devices.
 
 #### Airplay
 
+<div class="media">
+  <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/air_play_zps81b22978.png" border="0" alt="Airplay"/>
+</div>
     
 - Support most modern iOS and OS X devices.
 - Built-in modern Apple devices or through appleTV.
@@ -119,6 +155,9 @@ They allow streaming content among supported devices.
 
 #### Chrome Cast
 
+<div class="media">
+  <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/chrome_cast_zps54a891f0.png" border="0" alt="Airplay"/>
+</div>
     
 - Support Android, Chome OS, Windows, OS X devices.
 - Only provided via Chromecast, a small USB-standard device, at the moment. However, it is promised to be implemented on Google devices in the future.
@@ -129,6 +168,9 @@ They allow streaming content among supported devices.
 
 ### Receiver
 
+<div class="media">
+  <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/receiver_zps68b985fe.jpg" border="0" alt="Airplay"/>
+</div>
 
 Last but not leat, Receiver is a powerful device which provides multiple inputs to easily connect all the devices (with most of connector types) to one central control.
 It seems to be the most powerful 'all-in-one' solution for home entertainment network.
@@ -137,6 +179,14 @@ Furthermore, It offers ability to switch between the numerous audio/video inputs
 The receiver can also amplify audio signals to a set of surround sound speakers as well.
 In some luxury models, receiver can connect internet support some connective standard such as Airplay, and some cloud media provider such as Spotify, Pandora...
 
+<div class="media">
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/WH3JOzxA8G0" frameborder="0">video</iframe>
+  (Airplay Pioneer)
+</div>
+<div class="media">
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/4v-YD9ygkMo" frameborder="0">video</iframe>
+  (Spotify on Pioneer)
+</div>
 
 [This](http://www.hometheaternetwork.com/) is how it fit in your house. Interesting hah!!!
 
