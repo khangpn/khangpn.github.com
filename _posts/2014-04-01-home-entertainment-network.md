@@ -7,6 +7,7 @@ tags: [hardware, network, entertainment]
 image_dir: home_entertainment_network
 ---
 {% include JB/setup %}
+
 Daily, digital entertainment devices such as TV, laptop, cellphone or any personal devices can help to chill you down from many problems in life from work to wife.
 Now have a look at devices you have in your house: TV, DVD player, set-top-box, game console, speakers, smartphones, tablet, laptop... wow quite a lot, and those are still not all of them.
 In order to make them in use, we need to 'wire' them physically.
@@ -24,7 +25,7 @@ There are many technologies support them which we can implement via couples of w
 + Network connection.
 + Receiver
 
-<h2>Direct connection</h2>
+## Direct connection
 
 Use cables! Yes, but which one?
 
@@ -83,7 +84,7 @@ Ideal for HDTV, game console, DVD Blueray players etc... most of modern devices 
 You can read more about cables in HP's [post](https://h10025.www1.hp.com/ewfrf/wc/document?docname=c00396708&lc=en&cc=us&dlc=en). 
 Most of cables information in this post is referenced from it.
 
-<h2>Network connection</h2>
+## Network connection
 
 Nowaday, as the revolution of Internet of thing, most of our devices have ability to connect to a network.
 Some devices even have ability to connect to cloud-base services of its provider embedded.
@@ -100,7 +101,7 @@ In another word, what they need is an API, a standard protocol, a driver etc...
 Whatever we call it, their goal is only to provide a central interface which anyone can use to control the devices.
 There are two quite famous protocols which have been adopted in many home entertainment devices, *DLNA* and *UPnP*.
 
-<h3>UPnP and DLNA</h3>
+### UPnP and DLNA
 
 Both *DLNA* and *UPnP* have the same capability of supporting devices connected in the same network zone (e.g home, office) recognize each other to send and play media (e.g video, audio, photo...).
 They offer peer-to-peer network connectivity of devices.
@@ -109,7 +110,7 @@ So that it's flexible to add new devices and easy to scale the size of the netwo
 Any devices which want to achieve these certificates need to implement their set of protocols, and sastify specific testing process.
 Today, we can easily find *UPnP* or *DLNA* sign on many electronic devices e.g TV, DVD/Blueray players, game console, Laptop, smartphones etc...
 
-<h4> UPnP</h4>
+#### UPnP
 
 <div class="media">
   <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/upnp_logo_zps3155ca7f.jpg" border="0" alt="*UPnP*"/>
@@ -122,7 +123,7 @@ Consequently, it is supported by more devices.
 However, *UPnP* does not perform media verification.
 In another word, it can not guarantee the media to be played by receiver after transmitting.
 
-<h4> DLNA</h4>
+#### DLNA
 
 <div class="media">
   <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/dlna_logo_zps1ca21dca.jpg" border="0" alt="dlna"/>
@@ -135,12 +136,12 @@ Moreover, it covers *UPnP* missings by providing content verification.
 It only allows recoginized format shared among the network.
 By that way, it can ensure the shared file able to be played at the receiver.
 
-<h3>Airplay vs Chrome Cast</h3>
+### Airplay vs Chrome Cast
 
 These two technologies are developed by two big guys Apple and Google.
 They allow streaming content among supported devices.
 
-<h4> Airplay</h4>
+#### Airplay
 
 <div class="media">
   <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/air_play_zps81b22978.png" border="0" alt="Airplay"/>
@@ -152,7 +153,7 @@ They allow streaming content among supported devices.
 - Can stream device to device, share the bigger screen for gaming, mirroring etc...
 - Supported services: Netflix, YouTube, Hulu Plus, HBO GO, Pandora, Spotify...
 
-<h4> Chrome Cast</h4>
+#### Chrome Cast
 
 <div class="media">
   <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/chrome_cast_zps54a891f0.png" border="0" alt="Airplay"/>
@@ -165,7 +166,7 @@ They allow streaming content among supported devices.
 - Can only mirror contents on chrome browser.
 
 
-<h3>Receiver</h3>
+### Receiver
 
 <div class="media">
   <img class="small" src="{{ site.image_host }}/{{ page.image_dir }}/receiver_zps68b985fe.jpg" border="0" alt="Airplay"/>
@@ -189,7 +190,7 @@ In some luxury models, receiver can connect internet support some connective sta
 
 [This](http://www.hometheaternetwork.com/) is how it fit in your house. Interesting hah!!!
 
-<h2>Conclusion</h2>
+## Conclusion
 
 This is the end for today.
 In fact, we still have many ways to create a small entertainment network at home or office.
