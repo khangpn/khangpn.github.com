@@ -7,7 +7,6 @@ tags: [hardware, network, entertainment]
 image_dir: home_entertainment_network
 ---
 {% include JB/setup %}
-
 Daily, digital entertainment devices such as TV, laptop, cellphone or any personal devices can help to chill you down from many problems in life from work to wife.
 Now have a look at devices you have in your house: TV, DVD player, set-top-box, game console, speakers, smartphones, tablet, laptop... wow quite a lot, and those are still not all of them.
 In order to make them in use, we need to 'wire' them physically.
