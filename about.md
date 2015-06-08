@@ -16,4 +16,3 @@ A page where I share my knowledge. It's just like a bow of mixed noddle because 
 - LinkedIn: [http://www.linkedin.com/pub/khang-phuc-nguyen/3b/104/778](http://www.linkedin.com/pub/khang-phuc-nguyen/3b/104/778)
 - WordPress: [http://nguyenphuckhang.wordpress.com](http://nguyenphuckhang.wordpress.com)
 - Blogger: [http://noodlebundle.blogspot.com](http://noodlebundle.blogspot.com)
-- Tumblr: [http://khangpn.tumblr.com](http://khangpn.tumblr.com)
