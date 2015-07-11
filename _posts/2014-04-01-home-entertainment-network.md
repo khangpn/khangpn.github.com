@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Home Entertainment Network"
 description: ""
 category: technical

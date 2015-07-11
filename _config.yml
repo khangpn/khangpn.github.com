@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-pygments: true
+highlighter: 'pygments'
 
 # Add this variable to enable jekyll pagination, see index.html for usage
 paginate: 5
@@ -31,6 +31,15 @@ author :
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : http://khangpn.github.io
+
+# READ: http://jekyllrb.com/docs/configuration/#front-matter-defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
