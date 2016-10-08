@@ -1,6 +1,5 @@
 --- 
 title: "Home Entertainment Network"
-description: ""
 category: technical
 tags: [hardware, network, entertainment]
 image_dir: home_entertainment_network
