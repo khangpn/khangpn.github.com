@@ -5,7 +5,11 @@
 
 <div class="row">
   <div class="span14">
-    {{ post.content }}
+    {% if post.description %}
+      {{ post.description }}
+    {% else %}
+      {{ post.excerpt }}
+    {% endif %}
   
     {% unless post.tags == empty %}
       <div class="tag_box">
