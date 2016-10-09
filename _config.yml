@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: 'pygments'
+highlighter: 'rouge'
 
 # Add this variable to enable jekyll pagination, see index.html for usage
 paginate: 5
